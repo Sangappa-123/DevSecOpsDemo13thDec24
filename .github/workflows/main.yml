@@ -50,8 +50,8 @@ jobs:
         if: failure() # Executes only if the workflow fails
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com   # Replace with your email provider's SMTP server
-          server_port: 587                # Replace with your provider's SMTP port
+          server_address: smtp.gmail.com   # Replace with Actual email provider's SMTP server
+          server_port: 587                # Replace with Actual provider's SMTP port
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "🚨 GitHub Workflow Failed"
