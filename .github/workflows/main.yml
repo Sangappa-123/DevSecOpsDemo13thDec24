@@ -29,17 +29,17 @@ jobs:
             fi
             sleep 5
           done
-        continue-on-error: true # Even if this step fails, the workflow will continue
+        continue-on-error: false # Even if this step fails, the workflow will continue
 
       # # Step 3: Simulate a failure
       # - name: Simulate failure
       #   run: exit 1
       #   continue-on-error: true # Simulated step failure for testing
 
-      # Step 4: Log a warning on failure
-      - name: Log failure
-        if: failure()
-        run: echo "One or more steps failed!"
+      # # Step 4: Log a warning on failure
+      # - name: Log failure
+      #   if: failure()
+      #   run: echo "One or more steps failed!"
 
       # Step 5: Send email notification on failure
       - name: Send Email Notification
