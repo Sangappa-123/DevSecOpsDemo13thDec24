@@ -15,6 +15,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Step 2: Make the flaky script executable
+      - name: Set execute permission for flaky-script.sh
+        run: chmod +x flaky-script.sh
+
       # Step 2: Flaky step with retry logic
       - name: Run flaky step with retry
         run: |
