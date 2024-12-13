@@ -31,10 +31,10 @@ jobs:
           done
         continue-on-error: true # Even if this step fails, the workflow will continue
 
-      # Step 3: Simulate a failure
-      - name: Simulate failure
-        run: exit 1
-        continue-on-error: true # Simulated step failure for testing
+      # # Step 3: Simulate a failure
+      # - name: Simulate failure
+      #   run: exit 1
+      #   continue-on-error: true # Simulated step failure for testing
 
       # Step 4: Log a warning on failure
       - name: Log failure
