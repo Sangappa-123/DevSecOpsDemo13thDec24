@@ -55,10 +55,10 @@ jobs:
             Hello,
             The workflow **${{ github.workflow }}** failed on job **${{ github.job }}** in branch **${{ github.ref_name }}**.
             Please check the logs for more details.
-          to: "recipient@example.com"     # Replace with recipient email
+          to: "sangappa.biraj@hcltech.com"
           from: ${{ secrets.EMAIL_USERNAME }}
 
       # Step 6: Success message
       - name: Workflow Succeeded
         if: success()
-        run: echo "🎉 Workflow completed successfully!"
+        run: echo "Workflow completed successfully!"
